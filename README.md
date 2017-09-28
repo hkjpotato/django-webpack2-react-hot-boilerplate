@@ -36,8 +36,8 @@ If your data api is serving by another server (which is better), you need to set
 
 ##### About passing django's context variables to React:
 If you are doing client side rendering with React, context variables cannot be accessed directly in your React App. Here are two suggestions, both rely on the global ‘window’ as a glue:
- - [Glue Code](https://stackoverflow.com/questions/28610372/reactjs-with-django-real-usage): In this approach, Load bundles first, which defines an init function. Then in your template, call this init function with context variables.
- - Just attach the context variable to the global windows first, then load bundles to access it from ‘windows’.
+ - check __app1__: In this approach, Load bundles first, which defines an init function. Then in your template, call this init function with context variables. More explanation is [here](https://stackoverflow.com/questions/28610372/reactjs-with-django-real-usage)
+ - check __app2__: Just attach the context variable to the global windows first, then load bundles to access it from ‘windows’.
 
 ### Additional Guide
 Make sure Node and NPM is installed(https://github.com/creationix/nvm). I use node 6 now.
