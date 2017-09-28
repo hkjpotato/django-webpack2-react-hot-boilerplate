@@ -1,0 +1,22 @@
+{% load render_bundle from webpack_loader %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <!-- http://staticfiles.productiondjango.com/blog/stop-using-static-url-in-templates/ -->
+  <link rel="stylesheet" type="text/css" href="{% static 'app1/style.css' %}" />
+</head>
+<body>
+  <div id="root"></div>
+  {% render_bundle 'manifest' %}
+  {% render_bundle 'vendor' %}
+  {% render_bundle 'app1' %}
+  <script type="text/javascript">
+    //django glue code
+    window.app1.init({
+      msg: '{{msg}}',
+    })
+  </script>
+  </script>
+</body>
